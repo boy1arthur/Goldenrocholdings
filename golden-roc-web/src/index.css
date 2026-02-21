@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Noto+Serif+KR:wght@300;500;700&family=Noto+Sans+KR:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    background-color: #050810;
+    color: #E2E8F0;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #050810;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #423306;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #D4AF37;
+}
+
+.text-gradient-gold {
+    background: linear-gradient(135deg, #F9F1D8 0%, #D4AF37 50%, #856910 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@media (min-width: 1024px) {
+    .tree-line-horizontal {
+        position: absolute;
+        height: 1px;
+        background: #D4AF37;
+        top: -32px;
+        left: 10%;
+        width: 80%;
+        z-index: 0;
+    }
+
+    .tree-connector-up {
+        position: absolute;
+        width: 1px;
+        height: 32px;
+        background: #D4AF37;
+        top: -32px;
+        left: 50%;
+        z-index: 0;
+    }
+}
