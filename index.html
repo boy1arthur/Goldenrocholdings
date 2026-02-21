@@ -139,7 +139,6 @@
             const [introFading, setIntroFading] = useState(false);
             const canvasRef = useRef(null);
 
-            // 입장 후 8초 뒤 자동 스킵
             useEffect(() => {
                 if (hasEntered && showIntro) {
                     const timer = setTimeout(() => handleSkipIntro(), 8000);
@@ -160,7 +159,6 @@
                 return () => window.removeEventListener('scroll', handleScroll);
             }, []);
 
-            // 파티클: 인트로 종료 후에만 실행
             useEffect(() => {
                 if (showIntro) return;
                 const canvas = canvasRef.current;
@@ -206,7 +204,6 @@
                 return () => { window.removeEventListener('resize', resize); cancelAnimationFrame(animId); };
             }, [showIntro]);
 
-            // ── 1단계: 입장 전 화면 ──
             if (!hasEntered) {
                 return (
                     <div
@@ -232,11 +229,9 @@
                 );
             }
 
-            // ── 2단계: 입장 후 전체 렌더 ──
             return (
                 <div className="min-h-screen bg-navy-950 text-slate-300 font-sans selection:bg-gold-500 selection:text-black">
 
-                    {/* 인트로 동영상 오버레이 */}
                     {showIntro && (
                         <div className={`fixed inset-0 z-[100] bg-black flex items-center justify-center transition-opacity duration-1000 ${introFading ? 'opacity-0' : 'opacity-100'}`}>
                             <div className="absolute inset-0 overflow-hidden">
@@ -247,7 +242,11 @@
                                     className="w-full h-full object-cover"
                                     onEnded={handleSkipIntro}
                                 >
-                                    {/* ▼ 루트 경로로 변경 */}
                                     <source src="intro.mp4" type="video/mp4" />
-                                    {/* 영상 없을 때 Fallback: Pexels 무료 영상 */}
-                                    <source src="https://videos.p
+                                    <source src="https://videos.pexels.com/video-files/3129957/3129957-hd_1920_1080_25fps.mp4" type="video/mp4" />
+                                </video>
+                                <div className="absolute top-0 left-0 w-full h-[8vh] bg-black z-10"></div>
+                                <div className="absolute bottom-0 left-0 w-full h-[8vh] bg-black z-10"></div>
+                            </div>
+
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
