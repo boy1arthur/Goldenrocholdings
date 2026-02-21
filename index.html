@@ -9,7 +9,9 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Noto+Serif+KR:wght@300;500;700&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Noto+Serif+KR:wght@300;500;700&family=Noto+Sans+KR:wght@300;400;500&display=swap"
+        rel="stylesheet">
 
     <script>
         tailwind.config = {
@@ -48,25 +50,55 @@
     </script>
 
     <style>
-        body { font-family: 'Noto Sans KR', sans-serif; background-color: #050810; color: #E2E8F0; }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #050810; }
-        ::-webkit-scrollbar-thumb { background: #423306; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #D4AF37; }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #050810;
+            color: #E2E8F0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #050810;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #423306;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+
         .text-gradient-gold {
             background: linear-gradient(135deg, #F9F1D8 0%, #D4AF37 50%, #856910 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
         @media (min-width: 1024px) {
             .tree-line-horizontal {
-                position: absolute; height: 1px; background: #D4AF37;
-                top: -32px; left: 10%; width: 80%; z-index: 0;
+                position: absolute;
+                height: 1px;
+                background: #D4AF37;
+                top: -32px;
+                left: 10%;
+                width: 80%;
+                z-index: 0;
             }
+
             .tree-connector-up {
-                position: absolute; width: 1px; height: 32px; background: #D4AF37;
-                top: -32px; left: 50%; z-index: 0;
+                position: absolute;
+                width: 1px;
+                height: 32px;
+                background: #D4AF37;
+                top: -32px;
+                left: 50%;
+                z-index: 0;
             }
         }
     </style>
@@ -86,17 +118,17 @@
         );
 
         const Icons = {
-            Menu: (p) => <Icon {...p} path={<><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></>} />,
-            X: (p) => <Icon {...p} path={<><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></>} />,
-            ArrowRight: (p) => <Icon {...p} path={<><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></>} />,
-            Globe: (p) => <Icon {...p} path={<><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></>} />,
-            Building: (p) => <Icon {...p} path={<><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="12" y1="2" x2="12" y2="22"/><line x1="4" y1="10" x2="20" y2="10"/><line x1="4" y1="16" x2="20" y2="16"/></>} />,
-            TrendingUp: (p) => <Icon {...p} path={<><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></>} />,
-            ChevronDown: (p) => <Icon {...p} path={<polyline points="6 9 12 15 18 9"/>} />,
-            Film: (p) => <Icon {...p} path={<><rect x="2" y="2" width="20" height="20" rx="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></>} />,
-            GoldBar: (p) => <Icon {...p} path={<><path d="M6 4L2 8h20l-4-4H6z"/><rect x="2" y="8" width="20" height="12" rx="1"/></>} />,
-            Play: (p) => <Icon {...p} path={<polygon points="5 3 19 12 5 21 5 3"/>} />,
-            SkipForward: (p) => <Icon {...p} path={<><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" y1="5" x2="19" y2="19"/></>} />,
+            Menu: (p) => <Icon {...p} path={<><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="18" x2="21" y2="18" /></>} />,
+            X: (p) => <Icon {...p} path={<><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></>} />,
+            ArrowRight: (p) => <Icon {...p} path={<><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></>} />,
+            Globe: (p) => <Icon {...p} path={<><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></>} />,
+            Building: (p) => <Icon {...p} path={<><rect x="4" y="2" width="16" height="20" rx="2" /><line x1="12" y1="2" x2="12" y2="22" /><line x1="4" y1="10" x2="20" y2="10" /><line x1="4" y1="16" x2="20" y2="16" /></>} />,
+            TrendingUp: (p) => <Icon {...p} path={<><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" /><polyline points="17 6 23 6 23 12" /></>} />,
+            ChevronDown: (p) => <Icon {...p} path={<polyline points="6 9 12 15 18 9" />} />,
+            Film: (p) => <Icon {...p} path={<><rect x="2" y="2" width="20" height="20" rx="2.18" /><line x1="7" y1="2" x2="7" y2="22" /><line x1="17" y1="2" x2="17" y2="22" /><line x1="2" y1="12" x2="22" y2="12" /><line x1="2" y1="7" x2="7" y2="7" /><line x1="2" y1="17" x2="7" y2="17" /><line x1="17" y1="17" x2="22" y2="17" /><line x1="17" y1="7" x2="22" y2="7" /></>} />,
+            GoldBar: (p) => <Icon {...p} path={<><path d="M6 4L2 8h20l-4-4H6z" /><rect x="2" y="8" width="20" height="12" rx="1" /></>} />,
+            Play: (p) => <Icon {...p} path={<polygon points="5 3 19 12 5 21 5 3" />} />,
+            SkipForward: (p) => <Icon {...p} path={<><polygon points="5 4 15 12 5 20 5 4" /><line x1="19" y1="5" x2="19" y2="19" /></>} />,
         };
 
         const GoldenRocHoldings = () => {
@@ -164,7 +196,7 @@
                 for (let i = 0; i < 60; i++) particles.push(new Particle());
                 const animate = () => {
                     ctx.clearRect(0, 0, canvas.width, canvas.height);
-                    const g = ctx.createRadialGradient(canvas.width/2, canvas.height/2, 0, canvas.width/2, canvas.height/2, canvas.width);
+                    const g = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width);
                     g.addColorStop(0, '#0B1120'); g.addColorStop(1, '#050810');
                     ctx.fillStyle = g; ctx.fillRect(0, 0, canvas.width, canvas.height);
                     particles.forEach(p => { p.update(); p.draw(); });
@@ -182,9 +214,11 @@
                         onClick={handleEnter}
                     >
                         <div className="animate-pulse-slow mb-8">
-                            <svg className="w-24 h-24 text-gold-400" viewBox="0 0 100 100" fill="currentColor">
-                                <path d="M50 0 C50 0 70 40 100 40 C70 50 60 70 50 100 C40 70 30 50 0 40 C30 40 50 0 50 0 Z" />
-                            </svg>
+                            <img
+                                src="/assets/roclogo.png"
+                                alt="Golden Roc Logo"
+                                className="w-32 h-32 object-contain mx-auto"
+                            />
                         </div>
                         <h1 className="font-display text-3xl md:text-5xl text-gradient-gold tracking-[0.5em] mb-4">GOLDEN ROC</h1>
                         <p className="text-gold-600 text-xs tracking-[0.4em] uppercase mb-12">Holdings · Vision for Eternity</p>
@@ -214,7 +248,7 @@
                                     onEnded={handleSkipIntro}
                                 >
                                     {/* ▼ 영상 파일 경로 — goldenrocholdings.com 루트에 intro.mp4 업로드 후 수정 */}
-                                    <source src="/intro.mp4" type="video/mp4" />
+                                    <source src="/assets/rocopen.mp4" type="video/mp4" />
                                     {/* 영상 없을 때 Fallback: Pexels 무료 영상 */}
                                     <source src="https://videos.pexels.com/video-files/3129957/3129957-hd_1920_1080_25fps.mp4" type="video/mp4" />
                                 </video>
@@ -347,7 +381,7 @@
                                                     <p className="text-[10px] text-slate-500 uppercase tracking-wider">Gold & Resources</p>
                                                 </div>
                                                 <div className="w-full space-y-4">
-                                                    {[['한국 금 제련소','금 제련 및 가공 사업'],['한국 금 거래소','유통 및 판매 플랫폼'],['튀르키예 금제련소','해외 실물 자산 확보']].map(([name,desc])=>(
+                                                    {[['한국 금 제련소', '금 제련 및 가공 사업'], ['한국 금 거래소', '유통 및 판매 플랫폼'], ['튀르키예 금제련소', '해외 실물 자산 확보']].map(([name, desc]) => (
                                                         <div key={name} className="bg-white/5 border-l-2 border-gold-500 p-4 hover:bg-white/10 transition-colors">
                                                             <div className="flex justify-between items-center mb-1"><span className="text-white font-bold text-sm">{name}</span><span className="text-[9px] bg-gold-500 text-black px-1 font-bold rounded">100%</span></div>
                                                             <p className="text-xs text-slate-400">{desc}</p>
@@ -365,7 +399,7 @@
                                                     <p className="text-[10px] text-slate-500 uppercase tracking-wider">Asset Management</p>
                                                 </div>
                                                 <div className="w-full space-y-4">
-                                                    {[['부동산 매매법인','Cash Cow (안정적 현금흐름)'],['시행/건설사','부동산 개발 및 시행'],['호텔업','숙박 및 서비스 운영'],['해외 리조트','필리핀 보홀 풀빌라']].map(([name,desc])=>(
+                                                    {[['부동산 매매법인', 'Cash Cow (안정적 현금흐름)'], ['시행/건설사', '부동산 개발 및 시행'], ['호텔업', '숙박 및 서비스 운영'], ['해외 리조트', '필리핀 보홀 풀빌라']].map(([name, desc]) => (
                                                         <div key={name} className="bg-white/5 border-l-2 border-gold-500 p-4 hover:bg-white/10 transition-colors">
                                                             <div className="flex justify-between items-center mb-1"><span className="text-white font-bold text-sm">{name}</span><span className="text-[9px] bg-gold-500 text-black px-1 font-bold rounded">100%</span></div>
                                                             <p className="text-xs text-slate-400">{desc}</p>
@@ -511,4 +545,5 @@
         root.render(<GoldenRocHoldings />);
     </script>
 </body>
+
 </html>
