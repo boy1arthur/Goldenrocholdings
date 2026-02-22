@@ -15,7 +15,7 @@ const CinematicIntro = ({ onSkip, isFading }) => {
                     autoPlay
                     muted={false}
                     playsInline
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                     onEnded={onSkip}
                 >
                     <source src="/assets/intro.mp4" type="video/mp4" />
