@@ -191,7 +191,7 @@ const PhoenixStudio = ({ onBackToHome }) => {
                             onEnded={handleSkipIntro}
                         >
                             {/* public 폴더에 위치한 비디오 파일 호출 */}
-                            <source src="/golden.mp4" type="video/mp4" />
+                            <source src="/assets/golden.mp4" type="video/mp4" />
                             {/* 로컬 파일이 없을 때 대비용 백업 링크 */}
                             <source src="https://videos.pexels.com/video-files/3129957/3129957-hd_1920_1080_25fps.mp4" type="video/mp4" />
                         </video>
